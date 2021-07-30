@@ -8,6 +8,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+const collectionName = "clothes"
+
 func OpenConnection(conString string, dbName string) *DBHandle {
 	ctx := context.TODO()
 	clientOptions := options.Client().ApplyURI(conString)
@@ -24,5 +26,5 @@ func OpenConnection(conString string, dbName string) *DBHandle {
 }
 
 func (d *DBHandle) ProductCollection() *mongo.Collection {
-	return d.mdb.Collection("clothes")
+	return d.mdb.Collection(collectionName)
 }
