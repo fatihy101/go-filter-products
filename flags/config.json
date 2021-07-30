@@ -1,0 +1,5 @@
+{
+    "SERVER_PORT":":8080",
+    "CON_STR":"mongodb://localhost:27017",
+    "DBNAME":"products_test"
+}
